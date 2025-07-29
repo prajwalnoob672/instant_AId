@@ -116,32 +116,45 @@ BASE URL: https://localhost:8443/api
 
 | ENDPOINT                         | METHOD| REQUIRED ROLE | DESCRIPTION                                    |
 |----------------------------------|-------|---------------|------------------------------------------------|
-| /api/products                    | GET    | Any Authenticate| Retrieve a list of all products               |
-| /api/products/add                 | GET    | |Add a new product|
-| /api/products/:productCode        | POST   | |Create a new product with specific product code    |                   
-| /api/products/update/:productCode | PUT    | |Update an existing product by product code|
-| /api/products/delete/:productCode | DELETE | |Delete a product using its product code|
-| /api/countries                    | POST   | |Create and add new country|
-| /api/countries/add                | GET    | |Fetch all country from database| 
-| /api/technicians                  | GET    | |Get list of all technicians|
-| /api/technicians/add              | POST   | |Add a new technician|
-| /api/technicians/:techID          | GET    | |Get details of a technician by ID|
-| /api/technicians/update/:techID   | PUT    | |Update technician details by ID|
-| /api/technicians/delete/:techID   | DElETE | |Delete a technician by ID|
-| /api/incidents                    | GET    | |Get a list of all reported incidents|
-| /api/incidents/:id	            | GET    | |Get incidents details by its ID|
-| /api/incidents                    | POST   | |Report a new incident|
-| /api/incidents/:id/assign         | PUT    | |Assign a technician to an incident|
-| /api/incidents/:id                | PUT    | |Update details of a specific incident by its ID|
-| /api/customers                    | GET    | |Get all customers|
-| /api/customers/add                | POST   | |Register a new customer|
-| /api/customers/:customerID        | GET    | |Get customer details by customer ID|
-| /api/customers/update/:customerID | PUT    | |Update customer information by customer ID|
-| /api/customers/search/lastName    | GET    | |Search customers by their last name|
-| /api/customers/delete/:customerID | DELETE | |Delete a customer by ID|
-| /api/customers/login              | POST   | |Authenticate customer and log in|
-| /api/registrations/:customerId    | GET    | |Get all registrations for a specific customer|
-| /api/registrations                | POST   | |Register a customer for a product|
+| /api/products                    | GET    | Any Authenticate    | Retrieve a list of all products               |
+| /api/products/add                 | GET    | Admin              |Add a new product|
+| /api/products/:productCode        | POST | Any Authenticate    | Create a new product with specific product code|
+| /api/profile                      | GET    | Any Authenticate   |Get profile of user |      
+| /api/profile                      | PUT    | Any Authenticate   |Update own profile |      
+| /api/admin                        | GET    | Admin              |Update own profile |      
+| /api/technician                   | GET    | Technician & Admin |Update own profile |      
+| /api/customer                     | GEt    | Customer & Admin   |Update own profile |      
+| /api/products/update/:productCode | PUT    | Admin              |Update an existing product by product code|
+| /api/products/delete/:productCode | DELETE | Admin              |Delete a product using its product code|
+| /api/countries                    | POST   | Any Authenticate   |Create and add new country|
+| /api/countries/add                | GET    | Admin              |Fetch all country from database| 
+| /api/technicians                  | GET    | Admin              |Get list of all technicians|
+| /api/technicians/me               | GET    | Technician & Admin |Get logged-in technician's profile|
+| /api/technicians/add              | POST   | Technician & Admin |Add a new technician|
+| /api/technicians/addbyadmin       | POST   | Admin              |Register a new technician by Admin|
+| /api/technicians/:techID          | GET    | Technician & Admin |Get details of a technician by ID|
+| /api/technicians/update/:techID   | PUT    | Technician & Admin |Update technician details by ID|
+| /api/technicians/delete/:techID   | DElETE | Admin              |Delete a technician by ID|
+| /api/incidents                    | GET    | Technician & Admin |Get a list of all reported incidents|
+| /api/incidents/assigned           | GET    | Technician & Admin |Get a list of technician's assigned incidents|
+| /api/incidents/:id	            | GET    | Technician & Admin |Get incidents details by its ID|
+| /api/incidents                    | POST   | Customer           |Report a new incident|
+| /api/incidents/:id/assign         | PUT    | Admin              |Assign a technician to an incident|
+| /api/incidents/:id                | PUT    | Technician & Admin |Update details of a specific incident by its ID|
+| /api/customers                    | GET    | Admin              |Get all customers|
+| /api/customers/me                 | GET    | Customer & Admin   |Get logged-in customer's profile|
+| /api/customers/add                | POST   | Customer & Admin   |Register a new customer|
+| /api/customers/addbyadmin         | POST   | Admin              |Register a new customer by Admin|
+| /api/customers/:customerID        | GET    | Customer & Admin   |Get customer details by customer ID|
+| /api/customers/update/:customerID | PUT    | Customer & Admin   |Update customer information by customer ID|
+| /api/customers/search/lastName    | GET    | Admin              |Search customers by their last name|
+| /api/customers/delete/:customerID | DELETE | Admin              |Delete a customer by ID|
+| /api/auth/register                | POST   | Any                |Register user|
+| /api/auth/login                   | POST   | Any                |Login user|
+| /api/auth/refresh                 | POST   | Any                |Refresh the access token of user|
+| /api/auth/logout                  | POST   | Any                |Logout user |
+| /api/registrations/:customerId    | GET    | Customer & Admin   |Get all registrations for a specific customer|
+| /api/registrations                | POST   | Customer & Admin   |Register a customer for a product|
 
 ## Testing the application
 All APIs have been validated with Thunder Client (VS Code extension).
