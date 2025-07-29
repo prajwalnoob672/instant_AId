@@ -135,7 +135,7 @@ BASE URL: https://localhost:8443/api
 | /api/technicians/update/:techID   | PUT    | Technician & Admin |Update technician details by ID|
 | /api/technicians/delete/:techID   | DElETE | Admin              |Delete a technician by ID|
 | /api/incidents                    | GET    | Technician & Admin |Get a list of all reported incidents|
-| /api/incidents/assigned           | GET    | Technician & Admin |Get a list of technician's assigned incidents|
+| /api/incidents/assigned           | GET    | Technician         |Get a list of technician's assigned incidents|
 | /api/incidents/:id	            | GET    | Technician & Admin |Get incidents details by its ID|
 | /api/incidents                    | POST   | Customer           |Report a new incident|
 | /api/incidents/:id/assign         | PUT    | Admin              |Assign a technician to an incident|
