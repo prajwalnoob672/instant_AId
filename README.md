@@ -7,7 +7,9 @@ The SportsPro Technical Support application is designed for the technical suppor
 
 - Node.js + Express for the backend (API).  
 
-* PostgreSQL for the database.  
+* PostgreSQL for the database.
+
+- JWT (JSON Web Tokens) – Used for secure, stateless authentication and authorization  
 
 + Docker Compose to run everything together.  
 
