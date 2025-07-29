@@ -78,26 +78,26 @@ Example:
 ## AUTHENTICATION SYSTEM
 We use JWT (JSON Web Token) for secure, stateless user authentication. The flow is:
 
-+ Register (POST /register)  
+### Register (POST /register)  
    - User sends username, email, password, role.
    - Server saves user, hashes password, and returns success message.
 
-+ Login (POST /login)
+### Login (POST /login)
    - User sends email & password.
-   - Server verifies and returns:
-       accessToken (short-lived JWT)
-       refreshToken (long-lived)
+   - Server verifies and returns:  
+       - accessToken (short-lived JWT)  
+       - refreshToken (long-lived)
 
-+ Access Protected Routes
-  Client sends:
-  Authorization: Bearer <accessToken>
-  Server verifies token and allows access.
+### Access Protected Routes
+   - Client sends:  
+       - Authorization: Bearer <accessToken>  
+       - Server verifies token and allows access.
 
-+ Token Expiry & Refresh (POST /refresh-token)
-   If access token is expired:
-      - Client sends refreshToken
-      - Server validates and issues new accessToken
-+ Logout (POST /logout)
+### Token Expiry & Refresh (POST /refresh-token)  
+   - If access token is expired:  
+       - Client sends refreshToken  
+       - Server validates and issues new accessToken
+### Logout (POST /logout)  
    - Client sends refreshToken
    - Server deletes the refresh token
 
