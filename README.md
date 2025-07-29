@@ -155,6 +155,67 @@ BASE URL: https://localhost:8443/api
 | /api/registrations/:customerId    | GET    | Customer & Admin   |Get all registrations for a specific customer|
 | /api/registrations                | POST   | Customer & Admin   |Register a customer for a product|
 
+## USER ROLES AND USAGE EXAMPLE
+
+This app supports multiple user roles, each with specific permissions and capabilities:
+
+### 🛠️ Admin
+- Full control over users, incidents, products, and registrations.
+- Can assign technicians, register customers or technicians on behalf, and manage all data.
+
+**Example: Create New Product**
+```http
+POST /api/products
+Headers:
+  Authorization: Bearer <adminAccessToken>
+Body:
+{
+  "productCode": "P300",
+  "name": "SportsPro Firewall",
+  "version": 1.0,
+  "releaseDate": "2025-01-01"
+}
+```
+
+---
+
+###  Customer
+- Can view & update their profile
+- Register products, report incidents, and view their own data.
+
+**Example: Report an Incident**
+```http
+POST /api/incidents
+Headers:
+  Authorization: Bearer <customerAccessToken>
+Body:
+{
+  "title": "VPN not connecting",
+  "description": "Connection drops frequently",
+  "productCode": "P200"
+}
+```
+
+---
+
+###  Technician
+- Views assigned incidents
+- Updates incident status, resolution
+
+**Example: Update Incident**
+```http
+PUT /api/incidents/5
+Headers:
+  Authorization: Bearer <technicianAccessToken>
+Body:
+{
+  "status": "Resolved",
+  "resolution": "User reinstalled VPN, now works"
+}
+```
+
+---
+
 ## Testing the application
 All APIs have been validated with Thunder Client (VS Code extension).
 
