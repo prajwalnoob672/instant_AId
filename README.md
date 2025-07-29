@@ -160,8 +160,8 @@ BASE URL: https://localhost:8443/api
 This app supports multiple user roles, each with specific permissions and capabilities:
 
 ###  Admin
-- Full control over users, incidents, products, and registrations.
-- Can assign technicians, register customers or technicians on behalf, and manage all data.
+- Full control over users, incidents, products and registrations.
+- Can assign technicians, register customers or technicians on behalf and manage all data.
 
 **Example: Create New Product**
 ```http
@@ -181,7 +181,7 @@ Body:
 
 ###  Customer
 - Can view & update their profile
-- Register products, report incidents, and view their own data.
+- Register products, report incidents and view their own data.
 
 **Example: Report an Incident**
 ```http
@@ -200,7 +200,7 @@ Body:
 
 ###  Technician
 - Views assigned incidents
-- Updates incident status, resolution
+- Updates incident status
 
 **Example: Update Incident**
 ```http
