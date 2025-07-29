@@ -88,7 +88,7 @@ We use JWT (JSON Web Token) for secure, stateless user authentication. The flow 
 
 ### Register (POST /register)  
    - User sends username, email, password, role.
-   - Server saves user, hashes password, and returns success message.
+   - Server saves username, email, hashed password, role and returns success message.
 
 ### Login (POST /login)
    - User sends email & password.
