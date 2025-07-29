@@ -167,7 +167,7 @@ This app supports multiple user roles, each with specific permissions and capabi
 ```http
 POST /api/products
 Headers:
-  Authorization: Bearer <adminAccessToken>
+  Authorization: Bearer <accessToken>
 Body:
 {
   "productCode": "P300",
@@ -187,7 +187,7 @@ Body:
 ```http
 POST /api/incidents
 Headers:
-  Authorization: Bearer <customerAccessToken>
+  Authorization: Bearer <accessToken>
 Body:
 {
   "title": "VPN not connecting",
@@ -206,7 +206,7 @@ Body:
 ```http
 PUT /api/incidents/5
 Headers:
-  Authorization: Bearer <technicianAccessToken>
+  Authorization: Bearer <accessToken>
 Body:
 {
   "status": "Resolved",
