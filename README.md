@@ -36,6 +36,14 @@ Example:
          DB_PORT=your_db_port 
          
          PORT=your_backend_port
+         
+         JWT_SECRET=your_jwt_secret
+         
+         JWT_REFRESH_SECRET=your_refresh_jwt_secret
+         
+         ACCESS_TOKEN_EXPIRY=15m
+         
+         REFRESH_TOKEN_EXPIRY=7d
 
 + Ensure Docker and Docker Compose are Installed If not installed, install Docker Desktop for your OS.
 
