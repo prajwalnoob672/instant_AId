@@ -159,7 +159,7 @@ BASE URL: https://localhost:8443/api
 
 This app supports multiple user roles, each with specific permissions and capabilities:
 
-### 🛠️ Admin
+###  Admin
 - Full control over users, incidents, products, and registrations.
 - Can assign technicians, register customers or technicians on behalf, and manage all data.
 
