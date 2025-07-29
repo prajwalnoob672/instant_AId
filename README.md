@@ -212,7 +212,7 @@ Headers:
 Body:
 {
   "description": "Replaced faulty VPN configuration and rebooted system.",
-  "dateClosed": "2025-07-29" // Optional
+  "dateClosed": "2025-07-29T10:30:00Z" // Optional
 }
 ```
 
