@@ -123,9 +123,6 @@ BASE URL: https://localhost:8443/api
 | /api/products/:productCode        | POST | Any Authenticate    | Create a new product with specific product code|
 | /api/profile                      | GET    | Any Authenticate   |Get profile of user |      
 | /api/profile                      | PUT    | Any Authenticate   |Update own profile |      
-| /api/admin                        | GET    | Admin              |Update own profile |      
-| /api/technician                   | GET    | Technician & Admin |Update own profile |      
-| /api/customer                     | GEt    | Customer & Admin   |Update own profile |      
 | /api/products/update/:productCode | PUT    | Admin              |Update an existing product by product code|
 | /api/products/delete/:productCode | DELETE | Admin              |Delete a product using its product code|
 | /api/countries                    | POST   | Any Authenticate   |Create and add new country|
