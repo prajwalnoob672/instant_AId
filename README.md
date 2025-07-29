@@ -192,7 +192,9 @@ Body:
 {
   "title": "VPN not connecting",
   "description": "Connection drops frequently",
-  "productCode": "P200"
+  "productCode": "P200",
+  "dateOpened": "2025-07-29T10:30:00Z" // optional
+
 }
 ```
 
@@ -209,8 +211,8 @@ Headers:
   Authorization: Bearer <accessToken>
 Body:
 {
-  "status": "Resolved",
-  "resolution": "User reinstalled VPN, now works"
+  "description": "Replaced faulty VPN configuration and rebooted system.",
+  "dateClosed": "2025-07-29" // Optional
 }
 ```
 
