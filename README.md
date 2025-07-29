@@ -75,8 +75,8 @@ Example:
       docker-compose down -v 
       ## to stop and remove all containers,networks and volumes
 
-## Testing the application
-API are tested using thunder client.
+## AUTHENTICATION SYSTEM
+
 
 ## API DOCUMENTATION
 BASE URL: https://localhost:8443/api
@@ -110,6 +110,8 @@ BASE URL: https://localhost:8443/api
 | /api/registrations/:customerId    | GET    | |Get all registrations for a specific customer|
 | /api/registrations                | POST   | |Register a customer for a product|
 
+## Testing the application
+All APIs have been validated with Thunder Client (VS Code extension).
 
 ## Assumptions Made
 - Docker and Docker Compose are installed locally.  
