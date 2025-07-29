@@ -100,7 +100,7 @@ We use JWT (JSON Web Token) for secure, stateless user authentication. The flow 
 
 ### Access Protected Routes
    - Client sends:  
-       - Authorization: Bearer <accessToken>  
+       - Authorization: Bearer `<accessToken>`  
        - Server verifies token and allows access.
 
 ### Token Expiry & Refresh (POST /refresh-token)  
